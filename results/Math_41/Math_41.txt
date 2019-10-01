@@ -1,0 +1,9 @@
+public class Variance extends AbstractStorelessUnivariateStatistic implements Serializable, WeightedEvaluation {
+	}
+
+	double sumWts = 0;
+-	for (int i = 0; i < weights.length; i++) {
++	for (int i = 0 + begin; i < begin + length; i++) {
+		sumWts += weights[i];
+	}
+	

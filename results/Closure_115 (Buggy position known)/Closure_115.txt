@@ -1,0 +1,14 @@
+class FunctionInjector {
+	Node block = fnNode.getLastChild();
+ 
+	boolean hasSideEffects = false;
+-	if (block.hasChildren()) {
+-		Preconditions.checkState(block.hasOneChild());
+-		Node stmt = block.getFirstChild();
+-		if (stmt.isReturn()) {
+-			hasSideEffects = NodeUtil.mayHaveSideEffects(stmt.getFirstChild(), compiler);
+-		}
+-	}
++    
+	// CALL NODE: [ NAME, ARG1, ARG2, ... ]
+	Node cArg = callNode.getFirstChild().getNext();
